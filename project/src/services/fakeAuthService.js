@@ -27,5 +27,3 @@ export function login(username, password) {
   if (user) return "token";
   return null;
 }
-
-export function login(username, password) {}

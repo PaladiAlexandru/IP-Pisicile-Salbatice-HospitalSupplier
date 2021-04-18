@@ -1,0 +1,10 @@
+.navbar-logo{
+    padding:15px;
+    color: #fff;
+    pointer-events:none;
+}
+
+.navbar-mainbg{
+    background-color: black;
+    padding: 0px;
+}
