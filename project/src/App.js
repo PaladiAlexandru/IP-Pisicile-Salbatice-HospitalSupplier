@@ -13,6 +13,7 @@ import Cerere from "./components/Cerere/Cerere";
 import MesajeGuvern from "./components/MesajeGuvern/MesajeGuvern";
 import IstoricComenzi from "./components/IstoricComenzi/IstoricComenzi";
 import Istoricapr from "./components/IstoricAprovizionariGuvern/Istoricapr";
+import Navbar from "./components/Navbar/Navbar";
 
 class App extends Component {
   async componentDidMount() {
@@ -25,17 +26,18 @@ class App extends Component {
             username: "spitale",
             password: "tempP@assw0rd",
           },
+          withCredentials: true,
         },
       })
       .then(function (response) {
         console.log(response.data);
-        console.log(response.headers["Authorization"]);
       })
       .catch((err) => console.log(err));
   }
   render() {
     return (
       <React.Fragment>
+        <Navbar />
         <main className="container">
           <Switch>
             <Route path="/home" component={Home} />
@@ -48,7 +50,7 @@ class App extends Component {
             <Route path="/IstoricComenzi" component={IstoricComenzi} />
             <Route path="/IstoricApr" component={Istoricapr} />
             <Route path="/not-found" component={NotFound} />
-            <Redirect from="/" exact to="/home" />
+            <Redirect from="/" exact to="/login" />
           </Switch>
         </main>
       </React.Fragment>
