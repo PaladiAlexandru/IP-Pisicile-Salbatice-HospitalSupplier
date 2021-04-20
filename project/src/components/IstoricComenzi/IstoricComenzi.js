@@ -1,12 +1,17 @@
 import React from "react";
+import Navbar from "../Navbar/Navbar";
 
 const IstoricComenzi = () => {
   return (
-    <div classNme="container">
-      <h1 className="text-center" style={{ paddingTop: "30%" }}>
-        Istoric Comenzi
-      </h1>
-    </div>
+    <React.Fragment>
+      <Navbar />
+
+      <div classNme="container">
+        <h1 className="text-center" style={{ paddingTop: "30%" }}>
+          Istoric Comenzi
+        </h1>
+      </div>
+    </React.Fragment>
   );
 };
 

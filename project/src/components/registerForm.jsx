@@ -2,6 +2,7 @@ import React from "react";
 import Joi from "joi-browser";
 
 import Form from "./common/form";
+import Navbar from "./navbar";
 class RegisterForm extends Form {
   state = {
     data: { username: "", password: "", name: "" },
@@ -19,12 +20,16 @@ class RegisterForm extends Form {
   };
   render() {
     return (
-      <form onSubmit={this.handleSubmit}>
-        {this.renderInput("username", "Username")}
-        {this.renderInput("password", "Password", "password")}
-        {this.renderInput("name", "Name")}
-        {this.renderButton("Register")}
-      </form>
+      <React.Fragment>
+        <Navbar />
+
+        <form onSubmit={this.handleSubmit}>
+          {this.renderInput("username", "Username")}
+          {this.renderInput("password", "Password", "password")}
+          {this.renderInput("name", "Name")}
+          {this.renderButton("Register")}
+        </form>
+      </React.Fragment>
     );
   }
 }

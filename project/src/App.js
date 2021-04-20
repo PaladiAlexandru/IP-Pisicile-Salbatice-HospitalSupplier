@@ -37,7 +37,7 @@ class App extends Component {
   render() {
     return (
       <React.Fragment>
-        <Navbar />
+        
         <main className="container">
           <Switch>
             <Route path="/home" component={Home} />
@@ -48,7 +48,7 @@ class App extends Component {
             <Route path="/Cerere" component={Cerere} />
             <Route path="/MesajeGuvern" component={MesajeGuvern} />
             <Route path="/IstoricComenzi" component={IstoricComenzi} />
-            <Route path="/IstoricApr" component={Istoricapr} />
+            <Route path="/IstoricAprovizionariGuvern" component={Istoricapr} />
             <Route path="/not-found" component={NotFound} />
             <Redirect from="/" exact to="/login" />
           </Switch>

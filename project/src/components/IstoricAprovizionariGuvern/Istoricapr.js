@@ -1,12 +1,17 @@
 import React from "react";
+import Navbar from "../Navbar/Navbar";
 
 const Istoricapr = () => {
   return (
-    <div classNme="container">
-      <h1 className="text-center" style={{ paddingTop: "30%" }}>
-        Istoric Aprovizionari Guvern
-      </h1>
-    </div>
+    <React.Fragment>
+      <Navbar />
+
+      <div classNme="container">
+        <h1 className="text-center" style={{ paddingTop: "30%" }}>
+          Istoric Aprovizionari Guvern
+        </h1>
+      </div>
+    </React.Fragment>
   );
 };
 
