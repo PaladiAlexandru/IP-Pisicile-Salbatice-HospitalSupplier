@@ -6,7 +6,7 @@ const IstoricComenzi = () => {
     <React.Fragment>
       <Navbar />
 
-      <div classNme="container">
+      <div className="container">
         <h1 className="text-center" style={{ paddingTop: "30%" }}>
           Istoric Comenzi
         </h1>

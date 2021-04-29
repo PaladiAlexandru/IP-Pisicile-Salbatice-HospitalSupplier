@@ -21,7 +21,9 @@ class App extends Component {
       .get("https://ip-lab.herokuapp.com/api-token-auth/", {
         // Axios looks for the `auth` option, and, if it is set, formats a
         // basic auth header for you automatically.
+
         headers: {
+          "Access-Control-Allow-Origin": "*",
           auth: {
             username: "spitale",
             password: "tempP@assw0rd",
@@ -37,7 +39,6 @@ class App extends Component {
   render() {
     return (
       <React.Fragment>
-        
         <main className="container">
           <Switch>
             <Route path="/home" component={Home} />

@@ -1,25 +1,22 @@
-import React from 'react'
-import Navbar from '../Navbar/Navbar';
+import React from "react";
+import Navbar from "../Navbar/Navbar";
 import Joi from "joi-browser";
 import Form from "../common/form";
 
 class Cerere extends Form {
   state = {
-    data: { text: "", text: "" },
+    data: { tip: "", numar: "" },
     errors: {},
   };
 
   schema = {
     tip: Joi.string().label("tip"),
-    numar: Joi.string().required().label("numar"),
+    numar: Joi.string().label("numar"),
   };
 
   doSubmit = () => {
-    this.props.history.push("../home");
+    this.props.history.push("/home");
   };
-  
-
-   
 
   render() {
     return (

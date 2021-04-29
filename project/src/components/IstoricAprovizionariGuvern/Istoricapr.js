@@ -6,7 +6,7 @@ const Istoricapr = () => {
     <React.Fragment>
       <Navbar />
 
-      <div classNme="container">
+      <div classaNme="container">
         <h1 className="text-center" style={{ paddingTop: "30%" }}>
           Istoric Aprovizionari Guvern
         </h1>
