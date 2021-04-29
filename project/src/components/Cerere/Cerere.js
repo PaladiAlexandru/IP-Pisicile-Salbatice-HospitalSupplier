@@ -2,6 +2,7 @@ import React from "react";
 import Navbar from "../Navbar/Navbar";
 import Joi from "joi-browser";
 import Form from "../common/form";
+import axios from "axios";
 
 class Cerere extends Form {
   state = {
@@ -15,7 +16,22 @@ class Cerere extends Form {
   };
 
   doSubmit = () => {
-    this.props.history.push("/home");
+    axios
+      .post("https://matching-backend-api.herokuapp.com/route/demand", {
+        orderID: "101",
+        hospitalID: "4",
+        productNeed: "mask",
+        quantity: "5",
+      })
+      .then(
+        (response) => {
+          console.log(response);
+        },
+        (error) => {
+          console.log(error);
+        }
+      );
+    this.props.history.push("../home");
   };
 
   render() {
