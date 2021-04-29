@@ -43,20 +43,24 @@ class Form extends Component {
       </button>
     );
   };
-  renderSelect=(name,label,type="text") =>{
-    return(<div className="form-group">
-      <label htmlFor="name">{label}</label>
-          <select name={name} id={name} className="form-control">
-            <option value="masti">Masti</option>
-            <option value="combinezoane">Combinezoane</option>
-            <option selected value="sticleDezinfectant">Sticle Dezinfectant</option>
-            <option value="pacheteCuVataMedicinala">Pachete cu vata medicinala</option>
-            <option value="pansamente">Pansamente</option>
-          </select>
-          </div>
-
+  renderSelect = (name, label, type = "text") => {
+    return (
+      <div className="form-group">
+        <label htmlFor="name">{label}</label>
+        <select name={name} id={name} className="form-control">
+          <option value="masti">Masti</option>
+          <option value="combinezoane">Combinezoane</option>
+          <option defaultValue value="sticleDezinfectant">
+            Sticle Dezinfectant
+          </option>
+          <option value="pacheteCuVataMedicinala">
+            Pachete cu vata medicinala
+          </option>
+          <option value="pansamente">Pansamente</option>
+        </select>
+      </div>
     );
-  }
+  };
   renderInput = (name, label, type = "text") => {
     const { data, errors } = this.state;
     return (
@@ -71,6 +75,5 @@ class Form extends Component {
     );
   };
 }
-
 
 export default Form;
