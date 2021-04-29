@@ -1,11 +1,11 @@
-import React from 'react'
-import Navbar from '../Navbar/Navbar';
+import React from "react";
+import Navbar from "../Navbar/Navbar";
 import Joi from "joi-browser";
 import Form from "../common/form";
 
 class Oferta extends Form {
   state = {
-    data: { text: "", text: "" },
+    data: { numar: "", tip: "" },
     errors: {},
   };
 
@@ -17,9 +17,6 @@ class Oferta extends Form {
   doSubmit = () => {
     this.props.history.push("../home");
   };
-  
-
-   
 
   render() {
     return (
@@ -29,7 +26,7 @@ class Oferta extends Form {
           <div className="container">
             <h1>Oferta</h1>
             <form onSubmit={this.handleSubmit}>
-            {this.renderSelect("tip","Tip resursa")}
+              {this.renderSelect("tip", "Tip resursa")}
               {/* {this.renderInput("tip", "Tip resursa")} */}
               {this.renderInput("numar", "Numar")}
 
