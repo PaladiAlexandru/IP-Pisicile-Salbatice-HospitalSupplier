@@ -43,16 +43,21 @@ class Form extends Component {
       </button>
     );
   };
-  renderSelect = (name, label, type = "text") => {
+  renderSelect = (name, label) => {
+    const { data } = this.state;
     return (
       <div className="form-group">
         <label htmlFor="name">{label}</label>
-        <select name={name} id={name} className="form-control">
+        <select
+          name={name}
+          id={name}
+          className="form-control"
+          value={data[name]}
+          onChange={this.handleChange}
+        >
           <option value="masti">Masti</option>
           <option value="combinezoane">Combinezoane</option>
-          <option defaultValue value="sticleDezinfectant">
-            Sticle Dezinfectant
-          </option>
+          <option value="sticleDezinfectant">Sticle Dezinfectant</option>
           <option value="pacheteCuVataMedicinala">
             Pachete cu vata medicinala
           </option>
