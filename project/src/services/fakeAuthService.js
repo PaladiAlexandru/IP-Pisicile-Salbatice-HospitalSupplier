@@ -1,22 +1,624 @@
+// const users = [
+//   {
+//     _id: "5b21ca3eeb7f6fbccd471815",
+//     username: "Alex",
+//     email: "alex@yahoo.com",
+//     password: "parola",
+//   },
+//   {
+//     _id: "5b21ca3eeb7f6fbccd471816",
+//     username: "Georgiana",
+//     password: "parola2",
+//     email: "georgiana@yahoo.com",
+//   },
+//   {
+//     _id: "5b21ca3eeb7f6fbccd471812",
+//     username: "",
+//     password: "",
+//     email: "georgiana@yahoo.com",
+//   },
+// ];
 const users = [
   {
-    _id: "5b21ca3eeb7f6fbccd471815",
-    username: "Alex",
-    email: "alex@yahoo.com",
-    password: "parola",
+     "id":67,
+     "url":"http://ip-lab.herokuapp.com/users/67/?format=json",
+     "username":"superloser",
+     "email":"a@a.com",
+     "groups":[
+        
+     ],
+     "password":"pbkdf2_sha256$260000$rE8fE81JWOARPvlcPXie6R$t/YL4TkdwgK7l8tpXyxpGRCL+bVDiqv3RTz43BqX7Jg="
   },
   {
-    _id: "5b21ca3eeb7f6fbccd471816",
-    username: "Georgiana",
-    password: "parola2",
-    email: "georgiana@yahoo.com",
+     "id":66,
+     "url":"http://ip-lab.herokuapp.com/users/66/?format=json",
+     "username":"Vlad",
+     "email":"vlad@yahoo.com",
+     "groups":[
+        
+     ],
+     "password":"password"
   },
   {
-    _id: "5b21ca3eeb7f6fbccd471812",
-    username: "",
-    password: "",
-    email: "georgiana@yahoo.com",
+     "id":65,
+     "url":"http://ip-lab.herokuapp.com/users/65/?format=json",
+     "username":"PaladiAlexandru",
+     "email":"alex.lol@gmail.com",
+     "groups":[
+        
+     ],
+     "password":"password"
   },
+  {
+     "id":64,
+     "url":"http://ip-lab.herokuapp.com/users/64/?format=json",
+     "username":"RonanJones",
+     "email":"ronan.jones@gmail.com",
+     "groups":[
+        
+     ],
+     "password":"password"
+  },
+  {
+     "id":63,
+     "url":"http://ip-lab.herokuapp.com/users/63/?format=json",
+     "username":"AnikaBailey",
+     "email":"anika.b@gmail.com",
+     "groups":[
+        
+     ],
+     "password":"password"
+  },
+  {
+     "id":62,
+     "url":"http://ip-lab.herokuapp.com/users/62/?format=json",
+     "username":"KyronFlores",
+     "email":"flores.k@gmail.com",
+     "groups":[
+        
+     ],
+     "password":"password"
+  },
+  {
+     "id":61,
+     "url":"http://ip-lab.herokuapp.com/users/61/?format=json",
+     "username":"GeorgieLynch",
+     "email":"georgieLLL@gmail.com",
+     "groups":[
+        
+     ],
+     "password":"password"
+  },
+  {
+     "id":60,
+     "url":"http://ip-lab.herokuapp.com/users/60/?format=json",
+     "username":"HughOlson",
+     "email":"olson99@gmail.com",
+     "groups":[
+        
+     ],
+     "password":"password"
+  },
+  {
+     "id":59,
+     "url":"http://ip-lab.herokuapp.com/users/59/?format=json",
+     "username":"DexterRichardson",
+     "email":"dexter.lab@gmail.com",
+     "groups":[
+        
+     ],
+     "password":"password"
+  },
+  {
+     "id":58,
+     "url":"http://ip-lab.herokuapp.com/users/58/?format=json",
+     "username":"MaximillianMorgan",
+     "email":"morgan.M@gmail.com",
+     "groups":[
+        
+     ],
+     "password":"password"
+  },
+  {
+     "id":57,
+     "url":"http://ip-lab.herokuapp.com/users/57/?format=json",
+     "username":"ZackOrtiz",
+     "email":"zackKK@gmail.com",
+     "groups":[
+        
+     ],
+     "password":"password"
+  },
+  {
+     "id":56,
+     "url":"http://ip-lab.herokuapp.com/users/56/?format=json",
+     "username":"test",
+     "email":"test@gmail.com",
+     "groups":[
+        1
+     ],
+     "password":"test"
+  },
+  {
+     "id":55,
+     "url":"http://ip-lab.herokuapp.com/users/55/?format=json",
+     "username":"JensonGrant",
+     "email":"jesonnn@gmail.com",
+     "groups":[
+        
+     ],
+     "password":"password"
+  },
+  {
+     "id":54,
+     "url":"http://ip-lab.herokuapp.com/users/54/?format=json",
+     "username":"EuanThompson",
+     "email":"euannn@gmail.com",
+     "groups":[
+        
+     ],
+     "password":"password"
+  },
+  {
+     "id":53,
+     "url":"http://ip-lab.herokuapp.com/users/53/?format=json",
+     "username":"HaiderWalker",
+     "email":"haiderWall@gmail.com",
+     "groups":[
+        
+     ],
+     "password":"password"
+  },
+  {
+     "id":52,
+     "url":"http://ip-lab.herokuapp.com/users/52/?format=json",
+     "username":"JessieOwens",
+     "email":"jessieO@gmail.com",
+     "groups":[
+        
+     ],
+     "password":"password"
+  },
+  {
+     "id":51,
+     "url":"http://ip-lab.herokuapp.com/users/51/?format=json",
+     "username":"BrendanEllis",
+     "email":"ellisbrendan11@gmail.com",
+     "groups":[
+        
+     ],
+     "password":"password"
+  },
+  {
+     "id":50,
+     "url":"http://ip-lab.herokuapp.com/users/50/?format=json",
+     "username":"TristanHarris",
+     "email":"harrisTristan@gmail.com",
+     "groups":[
+        
+     ],
+     "password":"password"
+  },
+  {
+     "id":49,
+     "url":"http://ip-lab.herokuapp.com/users/49/?format=json",
+     "username":"JonathanRose",
+     "email":"rose345@gmail.com",
+     "groups":[
+        
+     ],
+     "password":"password"
+  },
+  {
+     "id":48,
+     "url":"http://ip-lab.herokuapp.com/users/48/?format=json",
+     "username":"LuisJimenez",
+     "email":"luisJ@gmail.com",
+     "groups":[
+        
+     ],
+     "password":"password"
+  },
+  {
+     "id":47,
+     "url":"http://ip-lab.herokuapp.com/users/47/?format=json",
+     "username":"JacobMarshall",
+     "email":"jacobM@gmail.com",
+     "groups":[
+        
+     ],
+     "password":"password"
+  },
+  {
+     "id":46,
+     "url":"http://ip-lab.herokuapp.com/users/46/?format=json",
+     "username":"DanielBryant",
+     "email":"danielB@gmail.com",
+     "groups":[
+        
+     ],
+     "password":"password"
+  },
+  {
+     "id":45,
+     "url":"http://ip-lab.herokuapp.com/users/45/?format=json",
+     "username":"EbonyShaw",
+     "email":"ebony55@gmail.com",
+     "groups":[
+        
+     ],
+     "password":"password"
+  },
+  {
+     "id":44,
+     "url":"http://ip-lab.herokuapp.com/users/44/?format=json",
+     "username":"OttoHall",
+     "email":"hall.OttO@gmail.com",
+     "groups":[
+        
+     ],
+     "password":"password"
+  },
+  {
+     "id":43,
+     "url":"http://ip-lab.herokuapp.com/users/43/?format=json",
+     "username":"SethOwens",
+     "email":"owens.s@gmail.com",
+     "groups":[
+        
+     ],
+     "password":"password"
+  },
+  {
+     "id":42,
+     "url":"http://ip-lab.herokuapp.com/users/42/?format=json",
+     "username":"ShawnSmith",
+     "email":"smith.s@gmail.com",
+     "groups":[
+        
+     ],
+     "password":"password"
+  },
+  {
+     "id":41,
+     "url":"http://ip-lab.herokuapp.com/users/41/?format=json",
+     "username":"LeroyCarter",
+     "email":"leroy.sane@gmail.com",
+     "groups":[
+        
+     ],
+     "password":"password"
+  },
+  {
+     "id":40,
+     "url":"http://ip-lab.herokuapp.com/users/40/?format=json",
+     "username":"ElonMusk",
+     "email":"elon.tesla@gmail.com",
+     "groups":[
+        
+     ],
+     "password":"password"
+  },
+  {
+     "id":39,
+     "url":"http://ip-lab.herokuapp.com/users/39/?format=json",
+     "username":"JohnCena",
+     "email":"john123cena@gmail.com",
+     "groups":[
+        
+     ],
+     "password":"password"
+  },
+  {
+     "id":38,
+     "url":"http://ip-lab.herokuapp.com/users/38/?format=json",
+     "username":"PopescuIoan",
+     "email":"popescu.ioan@gmail.com",
+     "groups":[
+        
+     ],
+     "password":"password"
+  },
+  {
+     "id":37,
+     "url":"http://ip-lab.herokuapp.com/users/37/?format=json",
+     "username":"MariciucIoan",
+     "email":"ioan.mariciuc@gmail.com",
+     "groups":[
+        
+     ],
+     "password":"password"
+  },
+  {
+     "id":36,
+     "url":"http://ip-lab.herokuapp.com/users/36/?format=json",
+     "username":"TudosaEduard",
+     "email":"edy7777@gmail.com",
+     "groups":[
+        
+     ],
+     "password":"password"
+  },
+  {
+     "id":35,
+     "url":"http://ip-lab.herokuapp.com/users/35/?format=json",
+     "username":"Messi",
+     "email":"messi-barca@gmail.com",
+     "groups":[
+        
+     ],
+     "password":"password"
+  },
+  {
+     "id":34,
+     "url":"http://ip-lab.herokuapp.com/users/34/?format=json",
+     "username":"MarkSpencer",
+     "email":"markSpanceR@gmail.com",
+     "groups":[
+        
+     ],
+     "password":"password"
+  },
+  {
+     "id":33,
+     "url":"http://ip-lab.herokuapp.com/users/33/?format=json",
+     "username":"VelmaGriffin",
+     "email":"velma00@gmail.com",
+     "groups":[
+        
+     ],
+     "password":"password"
+  },
+  {
+     "id":32,
+     "url":"http://ip-lab.herokuapp.com/users/32/?format=json",
+     "username":"LeeLevy",
+     "email":"leeLevy@gmail.com",
+     "groups":[
+        
+     ],
+     "password":"password"
+  },
+  {
+     "id":31,
+     "url":"http://ip-lab.herokuapp.com/users/31/?format=json",
+     "username":"DwayneJohnson",
+     "email":"johnson.d.55@gmail.com",
+     "groups":[
+        
+     ],
+     "password":"password"
+  },
+  {
+     "id":30,
+     "url":"http://ip-lab.herokuapp.com/users/30/?format=json",
+     "username":"OtisPalmer",
+     "email":"palmer153@gmail.com",
+     "groups":[
+        
+     ],
+     "password":"password"
+  },
+  {
+     "id":29,
+     "url":"http://ip-lab.herokuapp.com/users/29/?format=json",
+     "username":"CristianoRonaldo",
+     "email":"cristi.juve@gmail.com",
+     "groups":[
+        
+     ],
+     "password":"password"
+  },
+  {
+     "id":28,
+     "url":"http://ip-lab.herokuapp.com/users/28/?format=json",
+     "username":"GaneaFlorin",
+     "email":"florin12345@gmail.com",
+     "groups":[
+        
+     ],
+     "password":"password"
+  },
+  {
+     "id":25,
+     "url":"http://ip-lab.herokuapp.com/users/25/?format=json",
+     "username":"HaripAlexandru",
+     "email":"alex.harip.zzz@gmail.com",
+     "groups":[
+        1
+     ],
+     "password":"password"
+  },
+  {
+     "id":24,
+     "url":"http://ip-lab.herokuapp.com/users/24/?format=json",
+     "username":"StratonElena",
+     "email":"elena.straton@gmail.com",
+     "groups":[
+        1
+     ],
+     "password":"password"
+  },
+  {
+     "id":23,
+     "url":"http://ip-lab.herokuapp.com/users/23/?format=json",
+     "username":"VasiliuGabriel",
+     "email":"gabb442@gmail.com",
+     "groups":[
+        1
+     ],
+     "password":"password"
+  },
+  {
+     "id":22,
+     "url":"http://ip-lab.herokuapp.com/users/22/?format=json",
+     "username":"PopescuEusebiu",
+     "email":"popescu77@gmail.com",
+     "groups":[
+        1
+     ],
+     "password":"password"
+  },
+  {
+     "id":21,
+     "url":"http://ip-lab.herokuapp.com/users/21/?format=json",
+     "username":"CotofanAlexandru",
+     "email":"alex.coto@gmail.com",
+     "groups":[
+        1
+     ],
+     "password":"password"
+  },
+  {
+     "id":20,
+     "url":"http://ip-lab.herokuapp.com/users/20/?format=json",
+     "username":"MihocRoxana",
+     "email":"roxana1234@gmail.com",
+     "groups":[
+        1
+     ],
+     "password":"password"
+  },
+  {
+     "id":19,
+     "url":"http://ip-lab.herokuapp.com/users/19/?format=json",
+     "username":"PanzariuAdrian",
+     "email":"adi.panz@gmail.com",
+     "groups":[
+        
+     ],
+     "password":"password"
+  },
+  {
+     "id":18,
+     "url":"http://ip-lab.herokuapp.com/users/18/?format=json",
+     "username":"SimaClara",
+     "email":"sima.clara@gmail.com",
+     "groups":[
+        
+     ],
+     "password":"password"
+  },
+  {
+     "id":17,
+     "url":"http://ip-lab.herokuapp.com/users/17/?format=json",
+     "username":"StoleruDaniel",
+     "email":"dani.99@gmail.com",
+     "groups":[
+        
+     ],
+     "password":"password"
+  },
+  {
+     "id":16,
+     "url":"http://ip-lab.herokuapp.com/users/16/?format=json",
+     "username":"IonescuLuca",
+     "email":"luca.ionescu.cristiano@gmail.com",
+     "groups":[
+        
+     ],
+     "password":"password"
+  },
+  {
+     "id":13,
+     "url":"http://ip-lab.herokuapp.com/users/13/?format=json",
+     "username":"diana.turnea2",
+     "email":"turnea.diana@gmail.com",
+     "groups":[
+        
+     ],
+     "password":"password"
+  },
+  {
+     "id":12,
+     "url":"http://ip-lab.herokuapp.com/users/12/?format=json",
+     "username":"scripts",
+     "email":"",
+     "groups":[
+        
+     ],
+     "password":"pbkdf2_sha256$260000$H5tu2m35hZ0nIOoleKAzRA$UAjmxVeV+FBGbsSyoGqzNYgL6KEd0HwC310Gf6FneFo="
+  },
+  {
+     "id":11,
+     "url":"http://ip-lab.herokuapp.com/users/11/?format=json",
+     "username":"spitale",
+     "email":"",
+     "groups":[
+        
+     ],
+     "password":"pbkdf2_sha256$260000$eQy9xQdjMYjpCaqvpxFBxn$T2PDdWodBkotZRchllCeBTwcC1zsAAisuaTxSZmWIX8="
+  },
+  {
+     "id":10,
+     "url":"http://ip-lab.herokuapp.com/users/10/?format=json",
+     "username":"istoric",
+     "email":"",
+     "groups":[
+        
+     ],
+     "password":"pbkdf2_sha256$260000$dfKGsJvjv3gR5xb1LRwuqB$I+hLyih1/ehsqo2lPdeWP/aaWnRNUEzft6Trhz7xfRc="
+  },
+  {
+     "id":9,
+     "url":"http://ip-lab.herokuapp.com/users/9/?format=json",
+     "username":"matching",
+     "email":"",
+     "groups":[
+        
+     ],
+     "password":"pbkdf2_sha256$260000$g3NKp1o1shJ7TYLD0P1OB9$c3n1ZTLNXBHnFF0KcwaqokmlCElccU2mtgSuRyzhSes="
+  },
+  {
+     "id":8,
+     "url":"http://ip-lab.herokuapp.com/users/8/?format=json",
+     "username":"mobile",
+     "email":"",
+     "groups":[
+        
+     ],
+     "password":"pbkdf2_sha256$260000$cUSUcn4yc71OatB3Yl1dhc$KrOXVix029mqeJDbaxSuDoTx8ps2yFM5yuoUi5qDnxo="
+  },
+  {
+     "id":7,
+     "url":"http://ip-lab.herokuapp.com/users/7/?format=json",
+     "username":"minister",
+     "email":"",
+     "groups":[
+        
+     ],
+     "password":"pbkdf2_sha256$260000$Qi8GGNiFDgUvqwP4mW6pdW$30+Q9zYb0f6EbQn8UutwB11qzkoY5Q0B3iCmsb2mg0M="
+  },
+  {
+     "id":6,
+     "url":"http://ip-lab.herokuapp.com/users/6/?format=json",
+     "username":"listrate",
+     "email":"",
+     "groups":[
+        
+     ],
+     "password":"pbkdf2_sha256$260000$OzVP3OZL7tKw2QaisjHSEg$B5CADEHU4pzW2kKbs5YVKxJp61n78wvrYiI3Ql75NfU="
+  },
+  {
+     "id":5,
+     "url":"http://ip-lab.herokuapp.com/users/5/?format=json",
+     "username":"admin",
+     "email":"",
+     "groups":[
+        
+     ],
+     "password":"admin"
+  },
+  {
+     "id":1,
+     "url":"http://ip-lab.herokuapp.com/users/1/?format=json",
+     "username":"fcirloanta",
+     "email":"fcirloanta@ip.lab",
+     "groups":[
+        
+     ],
+     "password":"pbkdf2_sha256$260000$aTXOwEgLUCxPL5FT4t4mbr$Kyl4oKjQksn++Qjmckr5QiqLLbtd7MgmQ93dO6I3Xl8="
+  }
 ];
 
 export function login(username, password) {
