@@ -18,9 +18,9 @@ const MesajeGuvern = () => {
       'user_W6cwsDtzIoE5SHDzAB2MP'
     ).then((response) => {
       console.log('SUCCES', response.status, response.text);
+      alert("Mesajul a fost trimis");
     }).catch((err) => {
       console.log('Eroare', err);
-  
     });
     
   };
