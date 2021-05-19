@@ -6,36 +6,36 @@ import NotFound from "./components/not-found";
 
 import { Route, Switch, Redirect } from "react-router-dom";
 import React from "react";
-import axios from "axios";
+// import axios from "axios";
 import Home from "./components/Home/Home";
 import Oferta from "./components/Oferta/Oferta";
 import Cerere from "./components/Cerere/Cerere";
 import MesajeGuvern from "./components/MesajeGuvern/MesajeGuvern";
 import IstoricComenzi from "./components/IstoricComenzi/IstoricComenzi";
 import Istoricapr from "./components/IstoricAprovizionariGuvern/Istoricapr";
-import Navbar from "./components/Navbar/Navbar";
+// import Navbar from "./components/Navbar/Navbar";
 
 class App extends Component {
-  async componentDidMount() {
-    await axios
-      .get("https://ip-lab.herokuapp.com/api-token-auth/", {
-        // Axios looks for the `auth` option, and, if it is set, formats a
-        // basic auth header for you automatically.
+  // async componentDidMount() {
+  //   await axios
+  //     .get("https://ip-lab.herokuapp.com/api-token-auth/", {
+  //       // Axios looks for the `auth` option, and, if it is set, formats a
+  //       // basic auth header for you automatically.
 
-        headers: {
-          "Access-Control-Allow-Origin": "*",
-          auth: {
-            username: "spitale",
-            password: "tempP@assw0rd",
-          },
-          withCredentials: true,
-        },
-      })
-      .then(function (response) {
-        console.log(response.data);
-      })
-      .catch((err) => console.log(err));
-  }
+  //       headers: {
+  //         "Access-Control-Allow-Origin": "*",
+  //         auth: {
+  //           username: "spitale",
+  //           password: "tempP@assw0rd",
+  //         },
+  //         withCredentials: true,
+  //       },
+  //     })
+  //     .then(function (response) {
+  //       console.log(response.data);
+  //     })
+  //     .catch((err) => console.log(err));
+  // }
   render() {
     return (
       <React.Fragment>
