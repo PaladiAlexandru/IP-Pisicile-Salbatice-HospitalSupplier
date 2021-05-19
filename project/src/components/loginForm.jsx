@@ -17,9 +17,13 @@ class LoginForm extends Form {
   };
 
   doSubmit = () => {
-    const token = login(this.state.data.username, this.state.data.password);
-    console.log(token);
-    if (token) this.props.history.push("/home");
+    const id = login(this.state.data.username, this.state.data.password);
+
+    if (id) {
+      localStorage.setItem("id", id);
+      localStorage.setItem("username", this.state.data.username);
+      this.props.history.push("/home");
+    }
   };
 
   render() {

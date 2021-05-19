@@ -7,8 +7,8 @@ const Home = () => {
       <Navbar />
 
       <div className="container">
-        <h1 className="text-left" >
-          Bun venit, Alex!
+        <h1 className="text-left">
+          Bun venit, {localStorage.getItem("username")}!
         </h1>
         <p className="text-left" style={{ fontSize: "20px" }}>
           Spital: Spitalul Universitar de Urgență București
@@ -19,21 +19,17 @@ const Home = () => {
         <p className="text-left" style={{ fontSize: "20px" }}>
           Administrator spital: Paladi Alexandru
         </p>
-        <p className="text-left" style={{ fontSize: "20px"}}> 
+        <p className="text-left" style={{ fontSize: "20px" }}>
           Șoferi:
-          <ul style={{ marginLeft: "25px"}}>
+          <ul style={{ marginLeft: "25px" }}>
             <li>John Cena</li>
             <li>Brendan Ellis</li>
             <li>Anika Bailey</li>
           </ul>
         </p>
-
-
       </div>
     </React.Fragment>
   );
 };
 
 export default Home;
-
-
