@@ -26,8 +26,10 @@ class Home extends Component {
           const hpName = element.nume;
           const admins = element.administratori;
           const drivers = element.soferi;
-          if (admins[0] === username)
+          if (admins[0] === username) {
+            localStorage.setItem("hpId", element.id);
             this.setState({ adress, hpName, admins, drivers });
+          }
         });
       })
       .catch((err) => console.log(err));

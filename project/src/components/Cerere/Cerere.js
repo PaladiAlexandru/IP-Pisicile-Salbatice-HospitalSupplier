@@ -16,12 +16,16 @@ class Cerere extends Form {
   };
 
   doSubmit = () => {
+    var product = "";
+
+    if (this.state.data.tip === "masti") product = "mask";
+
     axios
       .post("https://matching-backend-api.herokuapp.com/route/demand", {
         orderID: "101",
-        hospitalID: "4",
-        productNeed: "mask",
-        quantity: "5",
+        hospitalID: localStorage.getItem("hpId"),
+        productNeed: product,
+        quantity: this.state.data.numar,
       })
       .then(
         (response) => {
