@@ -19,19 +19,22 @@ class Home extends Component {
 
     await axios
 
-      .get("https://ip-lab.herokuapp.com/institutii/")
+      .get("http://ip-lab.herokuapp.com/institutii/")
       .then((response) => {
         response.data.forEach((element) => {
           const adress = element.adresa;
           const hpName = element.nume;
           const admins = element.administratori;
           const drivers = element.soferi;
-          const id = element.id;
-          if (admins[0] === username) {
-            localStorage.setItem("hpId", element.id);
-            this.setState({id, adress, hpName, admins, drivers });
-          }
-        });
+          if (admins[0] === username)
+            this.setState({ adress, hpName, admins, drivers });
+            else if(admins[0] == null){
+              admins[0]=username;
+              this.setState({ adress, hpName, admins, drivers });
+            }
+        }
+        
+        );
       })
       .catch((err) => console.log(err));
   }
@@ -44,9 +47,6 @@ class Home extends Component {
           <h1 className="text-left">Bun venit, {this.state.username}!</h1>
           <p className="text-left" style={{ fontSize: "20px" }}>
             Spital: {this.state.hpName}
-          </p>
-          <p className="text-left" style={{ fontSize: "20px" }}>
-            ID Spital: {this.state.id}
           </p>
           <p className="text-left" style={{ fontSize: "20px" }}>
             Adresa spital: {this.state.adress}

@@ -1,4 +1,32 @@
+// const users = [
+//   {
+//     _id: "5b21ca3eeb7f6fbccd471815",
+//     username: "Alex",
+//     email: "alex@yahoo.com",
+//     password: "parola",
+//   },
+//   {
+//     _id: "5b21ca3eeb7f6fbccd471816",
+//     username: "Georgiana",
+//     password: "parola2",
+//     email: "georgiana@yahoo.com",
+//   },
+//   {
+//     _id: "5b21ca3eeb7f6fbccd471812",
+//     username: "",
+//     password: "",
+//     email: "georgiana@yahoo.com",
+//   },
+// ];
 const users = [
+    {
+      id: 65,
+      url: "http://ip-lab.herokuapp.com/users/65/?format=json",
+      username: "PaladiAlexandru",
+      email: "alex.lol@gmail.com",
+      groups: [],
+      password: "password",
+  },
   {
     id: 28,
     url: "http://ip-lab.herokuapp.com/users/28/?format=json",

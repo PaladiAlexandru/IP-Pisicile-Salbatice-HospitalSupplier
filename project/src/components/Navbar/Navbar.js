@@ -73,6 +73,14 @@ const Navbar=() => {
                             </i> Istoric Comenzi
                         </NavLink>
                     </li>
+                    <li className="nav-item ">
+                        <NavLink className="nav-link"
+                        to="/IstoricAprovizionariGuvern" exact>
+                            <i className="fas fa-copy">
+
+                            </i> Istoric Aprovizionari Guvern
+                        </NavLink>
+                    </li>
 
                 </div>
             </ul>
