@@ -6,7 +6,7 @@ import NotFound from "./components/not-found";
 
 import { Route, Switch, Redirect } from "react-router-dom";
 import React from "react";
-// import axios from "axios";
+ import axios from "axios";
 import Home from "./components/Home/Home";
 import Oferta from "./components/Oferta/Oferta";
 import Cerere from "./components/Cerere/Cerere";

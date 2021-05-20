@@ -6,7 +6,7 @@ import axios from "axios";
 class Home extends Component {
   state = {
     username: "",
-    id: "",
+    hpId: "",
     hpName: "",
     adress: "",
     admins: [],
@@ -26,10 +26,10 @@ class Home extends Component {
           const hpName = element.nume;
           const admins = element.administratori;
           const drivers = element.soferi;
-          const id = element.id;
+          const hpId = element.id;
           if (admins[0] === username) {
             localStorage.setItem("hpId", element.id);
-            this.setState({id, adress, hpName, admins, drivers });
+            this.setState({hpId, adress, hpName, admins, drivers });
           }
         });
       })
@@ -46,7 +46,7 @@ class Home extends Component {
             Spital: {this.state.hpName}
           </p>
           <p className="text-left" style={{ fontSize: "20px" }}>
-            ID Spital: {this.state.id}
+            ID Spital: {this.state.hpId}
           </p>
           <p className="text-left" style={{ fontSize: "20px" }}>
             Adresa spital: {this.state.adress}
