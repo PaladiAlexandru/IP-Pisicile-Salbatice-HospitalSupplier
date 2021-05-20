@@ -19,7 +19,7 @@ class Home extends Component {
 
     await axios
 
-      .get("http://ip-lab.herokuapp.com/institutii/")
+      .get("https://ip-lab.herokuapp.com/institutii/")
       .then((response) => {
         response.data.forEach((element) => {
           const adress = element.adresa;
