@@ -5,40 +5,43 @@ import Form from "./common/form";
 //import { login } from "./../services/fakeAuthService";
 import Navbar from "./navbar";
 
-
 class LoginForm extends Form {
   state = {
     username: "",
     password: "",
-    id: ""
+    id: "",
   };
   async componentDidMount() {
-    const axios = require('axios').default;
+    const axios = require("axios").default;
     const sendGetRequest = async () => {
-        try {
-            await axios.get('http://ip-lab.herokuapp.com/users', {
-                headers: {
-                    'authorization': 'Basic c3BpdGFsZTp0ZW1wUEBzc3cwcmQ='
-                }
-            })
-            .then((response) => {
-              response.data.forEach((element) => {
-                const username = element.username;
-                const password = element.password;
-                const id = element.id;
-                if (this.state.data.username === username && this.state.data.password === password) {
-                  console.log(element);
-                  localStorage.setItem("userId", element.id);
-                  this.setState({username, id, password});
-                }
-              });
+      try {
+        await axios
+          .get("https://ip-lab.herokuapp.com/users", {
+            headers: {
+              authorization: "Basic c3BpdGFsZTp0ZW1wUEBzc3cwcmQ=",
+            },
+          })
+          .then((response) => {
+            response.data.forEach((element) => {
+              const username = element.username;
+              const password = element.password;
+              const id = element.id;
+              if (
+                this.state.data.username === username &&
+                this.state.data.password === password
+              ) {
+                console.log(element);
+                localStorage.setItem("userId", element.id);
+                this.setState({ username, id, password });
+              }
             });
+          });
 
-            //console.log(resp.data);
-        } catch (err) {
-            // Handle Error Here
-            console.error(err);
-        }
+        //console.log(resp.data);
+      } catch (err) {
+        // Handle Error Here
+        console.error(err);
+      }
     };
     sendGetRequest();
   }
@@ -51,7 +54,6 @@ class LoginForm extends Form {
     username: Joi.string().label("Username"),
     password: Joi.string().required().label("Password"),
   };
-  
 
   doSubmit = () => {
     //const id = login(this.state.data.username, this.state.data.password);
