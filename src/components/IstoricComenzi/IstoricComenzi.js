@@ -10,21 +10,19 @@ function IstoricComenzi() {
     useEffect(() => {
         console.debug("After mount! Let's load data from API...");
         axios.get("http://ip-lab.herokuapp.com/istoric/?format=json").then(response => {
-          console.debug("Yuppi! Found a record in the API.");
-          console.debug("Calling setRecord...");
           setRecord(response.data);
-          console.debug("Calling setLoading...");
           setLoading(false);
         });
       }, []);
 
-
-      console.debug("Finally! Record is ready to be set.")
+      if (isLoading) {
+        return <div className="history">Loading...</div>;
+      }
 
     return (
       <React.Fragment>
       <Navbar />
-        <div className="history">
+      <div className="history">
             <form action="" className="table__sort">
                 <label>Sortare după:</label>
                 <select className="table__sort__select">
@@ -58,7 +56,7 @@ function IstoricComenzi() {
                     </tr>
                 </thead>
                 <tbody class="table__body">
-                        {record && record.map((recorder) => {
+                        {record.map((recorder) => {
                             return (
                                 <tr>
                                 <td>{recorder.id}</td>

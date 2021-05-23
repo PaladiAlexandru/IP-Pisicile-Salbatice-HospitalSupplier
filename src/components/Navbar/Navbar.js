@@ -66,12 +66,7 @@ const Navbar=() => {
                         </NavLink>
                     </li>
                     <li className="nav-item ">
-                        <NavLink className="nav-link"
-                        to="/IstoricComenzi" exact>
-                            <i className="fas fa-copy">
-
-                            </i> Istoric Comenzi
-                        </NavLink>
+                    <a href="https://www.youtube.com/" target="_blank" rel="noopener noreferrer">Istoric Comenzi</a>
                     </li>
 
                 </div>

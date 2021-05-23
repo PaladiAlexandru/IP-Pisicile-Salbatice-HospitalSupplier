@@ -57,7 +57,7 @@ class Home extends Component {
           <p className="text-left" style={{ fontSize: "20px" }}>
             Șoferi:
           </p>
-          <ul style={{ marginLeft: "25px" }}>
+          <ul style={{ marginLeft: "25px", fontSize: "20px" }}>
             {this.state.drivers.map((driver) => {
               return <li key={driver}>{driver}</li>;
             })}
