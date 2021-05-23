@@ -28,7 +28,7 @@ class LoginForm extends Form {
     const sendGetRequest = async () => {
       try {
         await axios
-          .get("http://ip-lab.herokuapp.com/users", {
+          .get("https://ip-lab.herokuapp.com/users", {
             headers: {
               authorization: "Basic c3BpdGFsZTp0ZW1wUEBzc3cwcmQ=",
             },
