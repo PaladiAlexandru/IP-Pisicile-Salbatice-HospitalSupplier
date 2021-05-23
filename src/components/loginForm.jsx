@@ -11,12 +11,24 @@ class LoginForm extends Form {
     password: "",
     id: "",
   };
-  async componentDidMount() {
+  async componentDidMount() {}
+  state = {
+    data: { username: "", password: "" },
+    errors: {},
+  };
+
+  schema = {
+    username: Joi.string().label("Username"),
+    password: Joi.string().required().label("Password"),
+  };
+
+  doSubmit = () => {
+    //const id = login(this.state.data.username, this.state.data.password);
     const axios = require("axios").default;
     const sendGetRequest = async () => {
       try {
         await axios
-          .get("https://ip-lab.herokuapp.com/users", {
+          .get("http://ip-lab.herokuapp.com/users", {
             headers: {
               authorization: "Basic c3BpdGFsZTp0ZW1wUEBzc3cwcmQ=",
             },
@@ -33,6 +45,8 @@ class LoginForm extends Form {
                 console.log(element);
                 localStorage.setItem("userId", element.id);
                 this.setState({ username, id, password });
+                localStorage.setItem("username", this.state.data.username);
+                this.props.history.push("/home");
               }
             });
           });
@@ -44,20 +58,6 @@ class LoginForm extends Form {
       }
     };
     sendGetRequest();
-  }
-  state = {
-    data: { username: "", password: "" },
-    errors: {},
-  };
-
-  schema = {
-    username: Joi.string().label("Username"),
-    password: Joi.string().required().label("Password"),
-  };
-
-  doSubmit = () => {
-    //const id = login(this.state.data.username, this.state.data.password);
-
     if (localStorage.getItem("userId")) {
       localStorage.setItem("username", this.state.data.username);
       this.props.history.push("/home");
