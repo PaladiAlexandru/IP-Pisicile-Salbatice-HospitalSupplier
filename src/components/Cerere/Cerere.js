@@ -19,6 +19,10 @@ class Cerere extends Form {
     var product = "";
 
     if (this.state.data.tip === "masti") product = "mask";
+    else if (this.state.data.tip === "combinezoane") product = "combinezon";
+    else if (this.state.data.tip === "sticleDezinfectant") product = "dezinfectant";
+    else if (this.state.data.tip === "pacheteCuVataMedicinala") product = "vata";
+    else if (this.state.data.tip === "pansamente") product = "pansament";
 
     axios
       .post("https://matching-backend-api.herokuapp.com/route/demand", {
