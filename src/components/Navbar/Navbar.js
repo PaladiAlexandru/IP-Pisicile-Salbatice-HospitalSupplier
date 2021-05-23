@@ -66,7 +66,7 @@ const Navbar=() => {
                         </NavLink>
                     </li>
                     <li className="nav-item ">
-                    <a href="https://www.youtube.com/" target="_blank" rel="noopener noreferrer">Istoric Comenzi</a>
+                    <a href="https://history-ip.herokuapp.com/" target="_blank" rel="noopener noreferrer">Istoric Comenzi</a>
                     </li>
 
                 </div>
